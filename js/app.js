@@ -54,13 +54,11 @@ class Player {
 
   update() {
     for (let enemy of allEnemies) {
-      console.log(this.y + "-" + enemy.y)
 
-      let enemyWidth = 101;
-      let enemyHeight = 171;
+      console.log(enemy.enemyWidth);
 
 
-      if (this.x < enemy.x + enemy.enemyWidth && this.x + this.width > enemy.x && this.y < enemy.y + enemy.enemyHeight && this.y + this.height > enemy.y) {
+      if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x && this.y < enemy.y + enemy.height && this.y + this.height > enemy.y) {
         alert("collison!");
       }
 
@@ -83,6 +81,9 @@ class Enemy {
     this.sprite = 'images/enemy-bug.png';
     this.xValue = 101;
     this.yValue = 83;
+    this.width = 101;
+    this.height = 171;
+
   }
 
 
