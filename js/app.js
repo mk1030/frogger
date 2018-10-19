@@ -55,11 +55,11 @@ class Player {
   update() {
     for (let enemy of allEnemies) {
 
-      console.log(enemy.enemyWidth);
+
 
 
       if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x && this.y < enemy.y + enemy.height && this.y + this.height > enemy.y) {
-        alert("collison!");
+
       }
 
 
@@ -121,4 +121,19 @@ allEnemies.push(enemy1, enemy2, enemy3);
 document.addEventListener('keyup', function(e) {
 
   player.handleInput(e.key);
+
+
+
+document.getElementsByClassName("pictures").addEventListener("click", grabImageSrc);
+
+
+function grabImageSrc () {
+
+  console.log("ahhh");
+}
+
+
+
+
+
 });
