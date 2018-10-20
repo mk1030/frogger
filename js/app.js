@@ -1,5 +1,6 @@
 //class is a newer syntax ES6+ while the constructor version has been around for a while.
 //Below is a class declaration
+//add a comment
 
 let sprite = 'images/char-girl.png'
 class Player {
