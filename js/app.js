@@ -59,8 +59,8 @@ class Player {
 
 
 
-      if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x && this.y < enemy.y + enemy.height && this.y + this.height > enemy.y) {
-
+      if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x && this.y < enemy.y + enemy.height/2 && this.y + this.height/2 > enemy.y) {
+		alert("collision"); 
       }
 
 
