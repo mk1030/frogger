@@ -59,14 +59,11 @@ class Player {
 
 
 
-<<<<<<< HEAD
+
       if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x &&
         this.y < enemy.y + enemy.height/2 && this.y + this.height/2 > enemy.y) {
             console.log("collision");
-=======
-      if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x && this.y < enemy.y + enemy.height/2 && this.y + this.height/2 > enemy.y) {
-		alert("collision"); 
->>>>>>> d285d88026806fa78c2dfad309125b4127b92674
+
       }
 
 
@@ -141,7 +138,7 @@ document.getElementsByClassName("pictures").addEventListener("click", grabImageS
 
 function grabImageSrc () {
 
-  console.log("ahhh");
+
 }
 
 
