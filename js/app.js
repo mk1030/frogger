@@ -58,8 +58,9 @@ class Player {
 
 
 
-      if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x && this.y < enemy.y + enemy.height && this.y + this.height > enemy.y) {
-
+      if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x &&
+        this.y < enemy.y + enemy.height/2 && this.y + this.height/2 > enemy.y) {
+            console.log("collision");
       }
 
 
@@ -102,6 +103,11 @@ class Enemy {
   // Draw the enemy on the screen, required method for game
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.beginPath();
+    ctx.lineWidth="4";
+    ctx.strokeStyle="green";
+    ctx.rect(this.x,this.y,this.width,this.height);
+    ctx.stroke();
   }
 
 
