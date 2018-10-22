@@ -1,5 +1,6 @@
 //class is a newer syntax ES6+ while the constructor version has been around for a while.
 //Below is a class declaration
+//add a comment
 
 let sprite = 'images/char-girl.png'
 class Player {
@@ -58,9 +59,14 @@ class Player {
 
 
 
+<<<<<<< HEAD
       if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x &&
         this.y < enemy.y + enemy.height/2 && this.y + this.height/2 > enemy.y) {
             console.log("collision");
+=======
+      if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x && this.y < enemy.y + enemy.height/2 && this.y + this.height/2 > enemy.y) {
+		alert("collision"); 
+>>>>>>> d285d88026806fa78c2dfad309125b4127b92674
       }
 
 
