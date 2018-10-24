@@ -8,8 +8,8 @@ class Player {
     //101 is the width of each block and 83 is the height. Found from engine.js
     this.xValue = 101;
     this.yValue = 83;
-    this.width = 101;
-    this.height = 171;
+    this.width = 76;
+    this.height = 81;
     //We want to start at a distance of 101 *2 horizontally
     this.xStart = this.xValue * 2;
     //We want to start at a distance of 101 *5 vertically
@@ -23,11 +23,11 @@ class Player {
   render() {
     //Resources
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    ctx.beginPath();
-    ctx.lineWidth="4";
-    ctx.strokeStyle="red";
-    ctx.rect(this.x,this.y,this.width,this.height);
-    ctx.stroke();
+    //ctx.beginPath();
+    //ctx.lineWidth="4";
+    //ctx.strokeStyle="red";
+    //ctx.rect(this.x,this.y,this.width,this.height);
+    //ctx.stroke();
   }
 
 
@@ -90,8 +90,8 @@ class Enemy {
     this.sprite = 'images/enemy-bug.png';
     this.xValue = 101;
     this.yValue = 83;
-    this.width = 101;
-    this.height = 171;
+    this.width = 99;
+    this.height = 69;
 
   }
 
@@ -111,11 +111,11 @@ class Enemy {
   // Draw the enemy on the screen, required method for game
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    ctx.beginPath();
-    ctx.lineWidth="4";
-    ctx.strokeStyle="green";
-    ctx.rect(this.x,this.y,this.width,this.height);
-    ctx.stroke();
+    //ctx.beginPath();
+    //ctx.lineWidth="4";
+  //  ctx.strokeStyle="green";
+    //ctx.rect(this.x,this.y,this.width,this.height);
+    //ctx.stroke();
   }
 
 
