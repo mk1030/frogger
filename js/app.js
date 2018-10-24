@@ -65,8 +65,8 @@ class Player {
 
 
 
-      if (this.x < enemy.x + enemy.width && this.x + this.width > enemy.x &&
-        this.y < enemy.y + enemy.height/2 && this.y + this.height/2 > enemy.y) {
+      if (this.x < enemy.x + (enemy.width) && this.x + (this.width/1.5) > enemy.x &&
+        this.y < enemy.y + (enemy.height/2) && this.y + (this.height/2) > enemy.y) {
             console.log("collision");
 
       }
@@ -137,14 +137,6 @@ document.addEventListener('keyup', function(e) {
   player.handleInput(e.key);
 
 
-
-document.getElementsByClassName("pictures").addEventListener("click", grabImageSrc);
-
-
-function grabImageSrc () {
-
-
-}
 
 
 
