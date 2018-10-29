@@ -70,7 +70,7 @@ class Player {
       }
 
       else {
-      console.log("whassup");
+      console.log("no collison");
       }
 
 
