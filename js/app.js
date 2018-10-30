@@ -61,7 +61,7 @@ class Player {
   update() {
     for (let enemy of allEnemies) {
 
-      if (this.x < enemy.x + (enemy.width) && this.x + (this.width/1.5) > enemy.x &&
+      if (this.x < enemy.x + (enemy.width) && this.x + (this.width) > enemy.x &&
         this.y < enemy.y + (enemy.height/2) && this.y + (this.height/2) > enemy.y) {
           this.y = this.yStart;
 
