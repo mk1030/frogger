@@ -2,14 +2,14 @@
 //Below is a class declaration
 //add a comment
 
-let sprite = 'images/char-girl.png'
+let sprite = 'images/char-princess-girl.png'
 class Player {
   constructor(sprite) {
     //101 is the width of each block and 83 is the height. Found from engine.js
     this.xValue = 101;
     this.yValue = 83;
-    this.width = 76;
-    this.height = 81;
+    this.width = 96;
+    this.height = 171;
     //We want to start at a distance of 101 *2 horizontally
     this.xStart = this.xValue * 2;
     //We want to start at a distance of 101 *5 vertically
@@ -23,11 +23,11 @@ class Player {
   render() {
     //Resources
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    //ctx.beginPath();
-    //ctx.lineWidth="4";
-    //ctx.strokeStyle="red";
-    //ctx.rect(this.x,this.y,this.width,this.height);
-    //ctx.stroke();
+    ctx.beginPath();
+    ctx.lineWidth="4";
+    ctx.strokeStyle="red";
+    ctx.rect(this.x,this.y,this.width,this.height);
+    ctx.stroke();
   }
 
 
@@ -62,7 +62,8 @@ class Player {
     for (let enemy of allEnemies) {
 
       if (this.x < enemy.x + (enemy.width) && this.x + (this.width) > enemy.x &&
-        this.y < enemy.y + (enemy.height/2) && this.y + (this.height/2) > enemy.y) {
+        this.y < enemy.y + (enemy.height) && this.y + (this.height/2.63) > enemy.y) {
+           alert('collision!');
           this.y = this.yStart;
 
 
@@ -92,8 +93,8 @@ class Enemy {
     this.sprite = 'images/enemy-bug.png';
     this.xValue = 101;
     this.yValue = 83;
-    this.width = 99;
-    this.height = 69;
+    this.width = 96;
+    this.height = 65;
 
   }
 
@@ -113,11 +114,11 @@ class Enemy {
   // Draw the enemy on the screen, required method for game
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    //ctx.beginPath();
-    //ctx.lineWidth="4";
-  //  ctx.strokeStyle="green";
-    //ctx.rect(this.x,this.y,this.width,this.height);
-    //ctx.stroke();
+    ctx.beginPath();
+    ctx.lineWidth="4";
+    ctx.strokeStyle="green";
+    ctx.rect(this.x,this.y,this.width,this.height);
+    ctx.stroke();
   }
 
 
