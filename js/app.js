@@ -11,9 +11,9 @@ class Player {
     this.width = 96;
     this.height = 171;
     //We want to start at a distance of 101 *2 horizontally
-    this.xStart = this.xValue * 2;
+    this.xStart = 202;
     //We want to start at a distance of 101 *5 vertically
-    this.yStart = this.yValue * 5;
+    this.yStart = (this.yValue * 5) - 20;
     this.x = this.xStart;
     this.y = this.yStart;
     this.sprite = sprite;
@@ -126,13 +126,13 @@ class Enemy {
 
 //create our player and enemy objects
 const player = new Player(sprite);
-const enemy1 = new Enemy(0, 83, 100);
-const enemy2 = new Enemy(83, 101, 200);
-const enemy3 = new Enemy(166, 202, 150);
+const enemy1 = new Enemy(0, 166, 100);
+//const enemy2 = new Enemy(83, 303, 200);
+//const enemy3 = new Enemy(166, 202, 150);
 
 const allEnemies = [];
 
-allEnemies.push(enemy1, enemy2, enemy3);
+allEnemies.push(enemy1);
 
 
 document.addEventListener('keyup', function(e) {
