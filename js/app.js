@@ -8,7 +8,7 @@ class Player {
     //101 is the width of each block and 83 is the height. Found from engine.js
     this.xValue = 101;
     this.yValue = 83;
-    this.width = 96;
+    this.width = 101;
     this.height = 171;
     //We want to start at a distance of 101 *2 horizontally
     this.xStart = 202;
@@ -60,19 +60,29 @@ class Player {
 
   update() {
     for (let enemy of allEnemies) {
-
-      if (this.x < enemy.x + (enemy.width) && this.x + (this.width) > enemy.x &&
-        this.y < enemy.y + (enemy.height) && this.y + (this.height/2.63) > enemy.y) {
-           alert('collision!');
-          this.y = this.yStart;
-
+//console.log(this.y, enemy.y);
+      //if(this.y === enemy.y) {
+        //console.log('Same row!');
+      //}
 
 
-      }
+      if(this.y === enemy.y && (enemy.x + enemy.width/2 > this.x  && enemy.x < this.x + this.width/2)){
+                       console.log("collision");
+}
 
-      else {
-      console.log("no collison");
-      }
+
+      //if (this.x < enemy.x + (enemy.width) && this.x + (this.width) > enemy.x &&
+        //this.y < enemy.y + (enemy.height) && this.y + (this.height/2.63) > enemy.y) {
+           //alert('collision!');
+
+
+
+
+      //}
+
+      //else {
+    //  console.log("no collison");
+      //}
 
 
     }
@@ -93,8 +103,8 @@ class Enemy {
     this.sprite = 'images/enemy-bug.png';
     this.xValue = 101;
     this.yValue = 83;
-    this.width = 96;
-    this.height = 65;
+    this.width = 101;
+    this.height = 171;
 
   }
 
@@ -102,6 +112,7 @@ class Enemy {
   // Parameter: dt, a time delta between ticks
   // You should multiply any movement by the dt parameter
   // which will ensure the game runs at the same speed for all computers.
+  //ensure enemy keeps looping.
   update(dt) {
     if (this.x < 505) {
       this.x = this.x + this.speed * dt;
@@ -126,13 +137,15 @@ class Enemy {
 
 //create our player and enemy objects
 const player = new Player(sprite);
-const enemy1 = new Enemy(0, 166, 100);
-//const enemy2 = new Enemy(83, 303, 200);
-//const enemy3 = new Enemy(166, 202, 150);
+const enemy1 = new Enemy(0, 146, 200);
+const enemy2 = new Enemy(303, 229, 200);
+const enemy3 = new Enemy(166, 312, 150);
 
 const allEnemies = [];
 
 allEnemies.push(enemy1);
+allEnemies.push(enemy2);
+allEnemies.push(enemy3);
 
 
 document.addEventListener('keyup', function(e) {
