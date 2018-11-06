@@ -12,7 +12,7 @@ class Player {
     this.height = 171;
     //We want to start at a distance of 101 *2 horizontally
     this.xStart = 202;
-    //We want to start at a distance of 101 *5 vertically
+    //We want to start at a distance of 83 *5 vertically
     this.yStart = (this.yValue * 5) - 20;
     this.x = this.xStart;
     this.y = this.yStart;
@@ -23,11 +23,7 @@ class Player {
   render() {
     //Resources
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    ctx.beginPath();
-    ctx.lineWidth="4";
-    ctx.strokeStyle="red";
-    ctx.rect(this.x,this.y,this.width,this.height);
-    ctx.stroke();
+
   }
 
 
@@ -51,43 +47,41 @@ class Player {
     }
 
     //Player can only move doen as long as it doesn't exceed the height of the total canvas
-    if (keyValue == 'ArrowDown' && this.y < 415) {
+    if (keyValue == 'ArrowDown' && this.y < 332) {
       this.y = this.y + 83;
+      console.log(this.y);
     }
 
 
   }
 
+
+
   update() {
     for (let enemy of allEnemies) {
-//console.log(this.y, enemy.y);
-      //if(this.y === enemy.y) {
-        //console.log('Same row!');
-      //}
+
 
 
       if(this.y === enemy.y && (enemy.x + enemy.width/2 > this.x  && enemy.x < this.x + this.width/2)){
-                       console.log("collision");
+                       this.reset();
 }
 
 
-      //if (this.x < enemy.x + (enemy.width) && this.x + (this.width) > enemy.x &&
-        //this.y < enemy.y + (enemy.height) && this.y + (this.height/2.63) > enemy.y) {
-           //alert('collision!');
 
 
-
-
-      //}
-
-      //else {
-    //  console.log("no collison");
-      //}
+      else {
+      console.log("no collison");
+      }
 
 
     }
 
 
+  }
+
+  reset() {
+    this.x = this.xStart;
+    this.y = this.yStart;
   }
 
 }
@@ -125,11 +119,7 @@ class Enemy {
   // Draw the enemy on the screen, required method for game
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    ctx.beginPath();
-    ctx.lineWidth="4";
-    ctx.strokeStyle="green";
-    ctx.rect(this.x,this.y,this.width,this.height);
-    ctx.stroke();
+
   }
 
 
