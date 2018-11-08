@@ -44,6 +44,18 @@ class Player {
     //Player can only move up as long as the position is positive.
     if (keyValue == 'ArrowUp' && this.y > 0) {
       this.y = this.y - 83;
+
+      if (this.y === -20) {
+
+
+        setTimeout(function() {
+          alert("You Win!");
+          player.reset();
+
+        }, 500);
+
+
+      }
     }
 
     //Player can only move doen as long as it doesn't exceed the height of the total canvas
@@ -64,16 +76,6 @@ class Player {
 
       if (this.y === enemy.y && (enemy.x + enemy.width / 2 > this.x && enemy.x < this.x + this.width / 2)) {
         this.reset();
-      } else {
-        if (this.y === -20) {
-
-
-          setTimeout(function() {
-            alert("You Win!");
-          }, 500);
-
-
-        }
       }
 
 
