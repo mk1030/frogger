@@ -48,11 +48,10 @@ class Player {
       if (this.y === -20) {
 
 
-        setTimeout(function() {
+        setTimeout(() => {
           alert("You Win!");
-          player.reset();
-
-        }, 500);
+          this.reset();
+        }, 500)
 
 
       }
