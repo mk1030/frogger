@@ -1,8 +1,7 @@
 //class is a newer syntax ES6+ while the constructor version has been around for a while.
 //Below is a class declaration
-//add a comment
 
-let sprite = 'images/char-princess-girl.png'
+let sprite = 'images/char-princess-girl.png';
 class Player {
   constructor(sprite) {
     //101 is the width of each block and 83 is the height. Found from engine.js
